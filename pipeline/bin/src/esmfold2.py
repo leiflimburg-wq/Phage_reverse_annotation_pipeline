@@ -13,6 +13,7 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--singleFASTA', type=str)
     parser.add_argument('--esm_model_cache', type=str)
+    parser.add_argument('--cuda_device', type=int)
     return parser.parse_args()
 args = get_args()
 
@@ -38,7 +39,7 @@ spi = StructurePredictionInput(
 # making sure the model is loaded on the GPU
 
 # the model is loaded in to the cache as definied in the config
-model = EsmFold2Model.from_pretrained("biohub/ESMFold2", cache_dir=args.esm_model_cache).cuda(device=0).eval()
+model = EsmFold2Model.from_pretrained("biohub/ESMFold2", cache_dir=args.esm_model_cache).cuda(device=args.cuda_device).eval()
 
 # ESM Fold folds the protein 
 result = ESMFold2InputBuilder().fold(

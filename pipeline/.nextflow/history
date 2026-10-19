@@ -12,3 +12,10 @@
 2026-10-08 16:35:50	1m 57s	irreverent_poitras	ERR	5cbcfbad15dee72b578a26f0200c0420	ec713559-5a41-4903-ba00-de5b5fd02ee6	nextflow run main.nf
 2026-10-08 16:37:59	1m 58s	suspicious_northcutt	ERR	5cbcfbad15dee72b578a26f0200c0420	382a8ace-d6d3-4c7f-bc59-0d5366ca05fa	nextflow run main.nf
 2026-10-08 16:45:09	1m 58s	prickly_goldberg	OK	5cbcfbad15dee72b578a26f0200c0420	35d75add-b4b3-4034-9cb2-5a161d35eea5	nextflow run main.nf
+2026-10-16 16:38:27	6m 15s	naughty_becquerel	ERR	442861a1b0b2e91d135bcbe91e5c4d71	6538c46a-0753-4cc4-9fe7-301d9bcbef86	nextflow run main.nf
+2026-10-19 10:00:32	16.9s	drunk_rosalind	ERR	442861a1b0b2e91d135bcbe91e5c4d71	6538c46a-0753-4cc4-9fe7-301d9bcbef86	nextflow run main.nf -resume
+2026-10-19 10:01:42	9m 27s	naughty_aryabhata	ERR	442861a1b0b2e91d135bcbe91e5c4d71	eca98813-8817-435b-9393-e1df530adbd0	nextflow run main.nf
+2026-10-19 10:12:19	2.8s	prickly_picasso	ERR	442861a1b0b2e91d135bcbe91e5c4d71	eca98813-8817-435b-9393-e1df530adbd0	nextflow run main.nf -resume
+2026-10-19 10:18:41	5m 8s	admiring_banach	ERR	442861a1b0b2e91d135bcbe91e5c4d71	eca98813-8817-435b-9393-e1df530adbd0	nextflow run main.nf -resume
+2026-10-19 10:35:51	24.4s	sick_boltzmann	ERR	442861a1b0b2e91d135bcbe91e5c4d71	eca98813-8817-435b-9393-e1df530adbd0	nextflow run main.nf -resume
+2026-10-19 10:41:22	5m 22s	fabulous_coulomb	ERR	442861a1b0b2e91d135bcbe91e5c4d71	eca98813-8817-435b-9393-e1df530adbd0	nextflow run main.nf -resume

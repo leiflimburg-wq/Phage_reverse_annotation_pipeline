@@ -2,7 +2,7 @@ process GBKextraction
 {
     conda "${params.conda_path}/python"
 
-    tag "filters the phold Annotation for unannotated proteins and exports them as aa fasta"
+    tag "filters for unannotated proteins and exports their aa fasta"
 
     publishDir "$params.outputDir/output", pattern: "combined_unannoted_aa_fasta/*.fasta", mode: params.pubDirMode
     

@@ -14,7 +14,7 @@ workflow
     // StructurePredict(SplitFasta.out.singleProteinFastas.flatten(), params.esm_model_cache)
     GBKextraction(PholdAnnotate.out.pholdAnnotation)
     StructurePredict(GBKextraction.out.singleProteinFastas.flatten(), params.esm_model_cache)
-    FoldseekDB(StructurePredict.out.foldedProteins)
+    FoldseekDB(StructurePredict.out.foldedProteins.collect())
     FoldseekMatch(FoldseekDB.out.foldseekDB_phage, params.validationprotein_reference)
     
 }

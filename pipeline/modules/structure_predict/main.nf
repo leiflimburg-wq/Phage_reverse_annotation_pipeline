@@ -17,6 +17,6 @@ process StructurePredict
     
     script:
     """
-        python ${projectDir}/bin/src/esmfold2.py --singleFASTA ${singleProteinFastas} --esm_model_cache ${params.esm_model_cache}
+        python ${projectDir}/bin/src/esmfold2.py --singleFASTA ${singleProteinFastas} --esm_model_cache ${params.esm_model_cache} --cuda_device ${params.cuda_device}
     """
 }
