@@ -1,20 +1,31 @@
 include { PharokkaAnnotate } from './modules/pharokka'
 include { PholdAnnotate } from './modules/phold'
-// include { SplitFasta } from './modules/split_Fasta'
 include { StructurePredict } from './modules/structure_predict'
 include { FoldseekDB } from './modules/foldseekDB'
 include { FoldseekMatch } from './modules/foldseekMatch'
+include { SplitFasta } from './modules/split_Fasta'
 include { GBKextraction } from './modules/gbk_extraction'
+include { Folddisco_processing } from './modules/folddisco_processing'
+include { Folddisco_Match} from './modules/folddiscoMatch'
 
 workflow
 {
     PharokkaAnnotate(params.phageGenome, params.pharokkaDB)
     PholdAnnotate(PharokkaAnnotate.out.pharokkaAnnotation,params.pholdDB)
-    // SplitFasta(PholdAnnotate.out.pholdaaAnnotation)
-    // StructurePredict(SplitFasta.out.singleProteinFastas.flatten(), params.esm_model_cache)
-    GBKextraction(PholdAnnotate.out.pholdAnnotation)
-    StructurePredict(GBKextraction.out.singleProteinFastas.flatten(), params.esm_model_cache)
+
+    if (params.annotateAll == true)
+    {
+        SplitFasta(PholdAnnotate.out.pholdaaAnnotation)
+        StructurePredict(SplitFasta.out.singleProteinFastas.flatten(), params.esm_model_cache)
+    }
+    else 
+    {
+        GBKextraction(PholdAnnotate.out.pholdAnnotation)
+        StructurePredict(GBKextraction.out.singleProteinFastas.flatten(), params.esm_model_cache)
+    }
     FoldseekDB(StructurePredict.out.foldedProteins.collect())
-    FoldseekMatch(FoldseekDB.out.foldseekDB_phage, params.validationprotein_reference)
-    
+    FoldseekMatch(FoldseekDB.out.foldseekDB_phage.collect(), params.curatedDB)
+    curated_ch = Channel.fromPath("${params.curatedDB}/*.cif")
+    Folddisco_processing(curated_ch.flatten(),params.site_map)
+    Folddisco_Match(StructurePredict.out.foldedProteins.collect().flatten(),Folddisco_processing.out.preProc_folddisco)
 }

@@ -47,7 +47,7 @@ with open(args.pholdAnnotation,"r") as pholdAnnotation:
                 #print("kommt bis while Schleife")
                 i = i + 1
                 line = lines[i]
-                while i + 1 < len(lines) and not line.startswith("     CDS"):
+                while i + 1 < len(lines) and not line.startswith("     CDS") or line.startswith("     tRNA"):
                     aaSequence += line[0:].strip().replace("\"","")
                     i = i + 1 
                     line = lines[i]

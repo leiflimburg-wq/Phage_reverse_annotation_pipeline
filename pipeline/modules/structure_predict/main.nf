@@ -13,7 +13,7 @@ process StructurePredict
         path esm_model_cache
         
     output:
-        path "folded_proteins/", emit: foldedProteins
+        path("folded_proteins/*.cif"), emit: foldedProteins
     
     script:
     """

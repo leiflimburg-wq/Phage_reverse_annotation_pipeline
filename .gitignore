@@ -1,4 +1,5 @@
 /pipeline/work
 /**.log
+/**.log.*
 /.nextflow/cache
 /.netflow/history

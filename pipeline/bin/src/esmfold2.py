@@ -40,9 +40,29 @@ spi = StructurePredictionInput(
 
 # the model is loaded in to the cache as definied in the config
 model = EsmFold2Model.from_pretrained("biohub/ESMFold2", cache_dir=args.esm_model_cache).cuda(device=args.cuda_device).eval()
+model = model.to(torch.bfloat16)
+
+print("Protein length:", len(aaSequence))
+
+print(
+    "Current allocated:",
+    torch.cuda.memory_allocated() / 1024**3,
+    "GB", 
+    flush=True
+)
+
+print(
+    "Current reserved:",
+    torch.cuda.memory_reserved() / 1024**3,
+    "GB",
+    flush=True
+)
 
 # ESM Fold folds the protein 
-result = ESMFold2InputBuilder().fold(
+try:
+    with torch.inference_mode():
+        with torch.autocast(device_type="cuda",dtype=torch.bfloat16):
+            result = ESMFold2InputBuilder().fold(
                 # loads the model and sequence
                 model, spi, 
                 # defines the model parameters
@@ -52,6 +72,7 @@ result = ESMFold2InputBuilder().fold(
                 seed=0
             )
 # the results are written as .cif 
-with open(f"folded_proteins/{name}.cif", "w") as f:
+    with open(f"folded_proteins/{name}.cif", "w") as f:
                 f.write(result.complex.to_mmcif())
-
+finally:
+    print(f"Peak GPU memory: {torch.cuda.max_memory_allocated()/2**30:.1f} GiB", flush=True)

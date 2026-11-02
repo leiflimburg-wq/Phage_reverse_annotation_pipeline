@@ -1,0 +1,66 @@
+Oct-30 18:02:33.658 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
+Oct-30 18:02:33.905 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
+Oct-30 18:02:33.926 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/limburg/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
+Oct-30 18:02:33.949 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-30 18:02:33.949 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-30 18:02:33.952 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Oct-30 18:02:33.968 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Oct-30 18:02:34.077 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Oct-30 18:02:34.081 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-30 18:02:34.106 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/nextflow.config
+Oct-30 18:02:34.109 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/nextflow.config
+Oct-30 18:02:34.112 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Oct-30 18:02:34.128 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-30 18:02:34.468 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-30 18:02:34.468 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-30 18:02:34.482 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/limburg/.nextflow/secrets/store.json
+Oct-30 18:02:34.485 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@1e253c9d] - activable => nextflow.secret.LocalSecretsProvider@1e253c9d
+Oct-30 18:02:34.497 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [silly_mendel] - revision: de1e6bcc7a
+Oct-30 18:02:34.568 [main] DEBUG nextflow.Session - Session UUID: 4d62d880-107c-4e7b-9de2-2a663b08cbe7
+Oct-30 18:02:34.568 [main] DEBUG nextflow.Session - Run name: silly_mendel
+Oct-30 18:02:34.569 [main] DEBUG nextflow.Session - Executor pool size: 224
+Oct-30 18:02:34.577 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-30 18:02:34.582 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=672; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Oct-30 18:02:34.601 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.6 build 12646
+  Created: 09-07-2026 18:49 UTC (20:49 CEST)
+  System: Linux 6.8.0-147-generic
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 25.0.2-internal-adhoc.rattler.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 1964615@data [127.0.1.1]
+  CPUs: 224 - Mem: 2.2 TB (1.7 TB) - Swap: 8 GB (8 GB)
+Oct-30 18:02:34.649 [main] DEBUG nextflow.Session - Work-dir: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/work [ceph]
+Oct-30 18:02:34.694 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-30 18:02:34.706 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Oct-30 18:02:34.708 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Oct-30 18:02:34.757 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-30 18:02:34.769 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 225; maxThreads: 1000
+Oct-30 18:02:35.048 [main] DEBUG nextflow.Session - Session start
+Oct-30 18:02:35.053 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Oct-30 18:02:35.299 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+Oct-30 18:02:35.314 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Oct-30 18:02:35.461 [main] ERROR nextflow.cli.Launcher - Script compilation failed
+nextflow.exception.ScriptCompilationException: Script compilation failed
+	at nextflow.script.parser.v2.ScriptLoaderV2.parse0(ScriptLoaderV2.groovy:129)
+	at nextflow.script.parser.v2.ScriptLoaderV2.parse(ScriptLoaderV2.groovy:81)
+	at nextflow.script.parser.v2.ScriptLoaderV2.parse(ScriptLoaderV2.groovy)
+	at nextflow.script.ScriptRunner.parseScript(ScriptRunner.groovy:215)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:126)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+_nf_script_1f26c5a031e2a4d0: 17: Unexpected input: '\n' @ line 17, column 12.
+       script:
+              ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:292)
+	at org.codehaus.groovy.control.CompilationUnit$ISourceUnitOperation.doPhaseOperation(CompilationUnit.java:878)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:660)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:634)
+	at nextflow.script.parser.v2.ScriptCompiler.compile0(ScriptCompiler.java:146)
+	at nextflow.script.parser.v2.ScriptCompiler.compile(ScriptCompiler.java:112)
+	at nextflow.script.parser.v2.ScriptLoaderV2.parse0(ScriptLoaderV2.groovy:114)
+	... 7 common frames omitted
