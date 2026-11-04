@@ -8,7 +8,7 @@ include { GBKextraction } from './modules/gbk_extraction'
 include { Folddisco_processing } from './modules/folddisco_processing'
 include { Folddisco_Match} from './modules/folddiscoMatch'
 include { Lolalign } from './modules/lolalign'
-
+include { Combine_results } from './modules/combine_results'
 
 workflow
 {
@@ -31,4 +31,5 @@ workflow
     Folddisco_processing(curated_ch.flatten(),params.site_map)
     Folddisco_Match(StructurePredict.out.foldedProteins.collect(),Folddisco_processing.out.preProc_folddisco)
     //Lolalign(FoldseekDB.out.foldseekDB_phage.collect(), params.curatedDB) //lolalign ist not yet available 
+    Combine_results(Folddisco_Match.out.folddisco_matches.collect(),FoldseekMatch.out.foldseek_matches)
 }

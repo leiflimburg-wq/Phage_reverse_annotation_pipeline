@@ -1,6 +1,5 @@
 process Folddisco_Match
 {
-    cache false
     conda "${params.conda_path}/folddisco"
 
     tag "compares Motives with Foldddisco"
@@ -12,7 +11,7 @@ process Folddisco_Match
         tuple val(prot_ID), path(curated_ch), path(site_txts)
 
     output:
-        path "folddisco_output*.txt",  emit: folddisco_match
+        path "folddisco_output*.txt",  emit: folddisco_matches
       
         
     script:

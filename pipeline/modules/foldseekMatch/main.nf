@@ -11,7 +11,7 @@ process FoldseekMatch
         path curatedDB
 
     output: 
-       path "foldseekMatches.m8"
+       path "foldseekMatches.m8", emit: foldseek_matches
 
 // e value might have to be fine tuned
 // targetphageDB was created by a prior 

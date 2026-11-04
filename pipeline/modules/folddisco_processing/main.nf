@@ -1,11 +1,8 @@
 process Folddisco_processing
 {
-    cache false
     conda "${params.conda_path}/python"
 
     tag "Assigns Sites to Proteins"
-
-    //publishDir "${params.outputDir/output}", pattern: "combined_unannoted_aa_fasta/*.fasta" 
     
     input:
         path curated_ch
