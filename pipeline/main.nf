@@ -7,6 +7,8 @@ include { SplitFasta } from './modules/split_Fasta'
 include { GBKextraction } from './modules/gbk_extraction'
 include { Folddisco_processing } from './modules/folddisco_processing'
 include { Folddisco_Match} from './modules/folddiscoMatch'
+include { Lolalign } from './modules/lolalign'
+
 
 workflow
 {
@@ -27,5 +29,6 @@ workflow
     FoldseekMatch(FoldseekDB.out.foldseekDB_phage.collect(), params.curatedDB)
     curated_ch = Channel.fromPath("${params.curatedDB}/*.cif")
     Folddisco_processing(curated_ch.flatten(),params.site_map)
-    Folddisco_Match(StructurePredict.out.foldedProteins.collect().flatten(),Folddisco_processing.out.preProc_folddisco)
+    Folddisco_Match(StructurePredict.out.foldedProteins.collect(),Folddisco_processing.out.preProc_folddisco)
+    //Lolalign(FoldseekDB.out.foldseekDB_phage.collect(), params.curatedDB) //lolalign ist not yet available 
 }

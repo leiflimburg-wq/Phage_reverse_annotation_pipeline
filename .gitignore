@@ -1,5 +1,13 @@
 /pipeline/work
-/**.log
-/**.log.*
-/.nextflow/cache
-/.netflow/history
+/pipeline/.nextflow.log
+/pipeline/.nextflow.log.1
+/pipeline/.nextflow.log.2
+/pipeline/.nextflow.log.3
+/pipeline/.nextflow.log.4
+/pipeline/.nextflow.log.5
+/pipeline/.nextflow.log.6
+/pipeline/.nextflow.log.7
+/pipeline/.nextflow.log.8
+/pipeline/.nextflow.log.9
+/pipeline/.nextflow/cache
+/piepline/.nextflow/history

@@ -28,15 +28,15 @@ while not p == numprot:
     if uniprot_id[p] in files:
         if not str(binding[p]) == "nan":
             logging.info(binding[p])
-            with open(f"./{uniprot_id[p]}_folddiscoBinding.txt", "w") as fdbd :
+            with open(f"./map_{uniprot_id[p]}_folddiscoBinding.txt", "w") as fdbd :
                 fdbd.write(str(binding[p]).replace(".",","))
         if not str(active[p]) == "nan":
             logging.info(active[p])
-            with open(f"./{uniprot_id[p]}folddiscoActive.txt", "w") as fdac :
+            with open(f"./map_{uniprot_id[p]}folddiscoActive.txt", "w") as fdac :
                 fdac.write(str(active[p]).replace(".",","))
         if not str(site[p]) == "nan":
             logging.info(site[p])
-            with open(f"./{uniprot_id[p]}folddiscoSite.txt", "w") as fdsi :
+            with open(f"./map_{uniprot_id[p]}folddiscoSite.txt", "w") as fdsi :
                 fdsi.write(str(site[p]).replace(".",","))
         print(uniprot_id[p])
         p = numprot
