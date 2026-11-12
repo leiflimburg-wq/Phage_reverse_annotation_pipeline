@@ -1,20 +1,22 @@
 process FoldseekDB
 {
+    cache params.foldseekCache
+    maxForks params.foldseekForks
     tag "creates DB of folded Phage proteins"
 
     conda "${params.conda_path}/foldseek"
 
     input: 
-        path foldedProteins
+        tuple val(geneID), path(foldedProteins)
 
     output: 
-        path "targetphageDB*", emit: foldseekDB_phage
+        tuple val(geneID), path("${geneID}_targetphageDB*"), emit: foldseekDB_phage
 
     script:
     """
     foldseek createdb \\
     ${foldedProteins} \\
-     targetphageDB \\
+    ${geneID}_targetphageDB \\
     --input-format 2 \\
     """
 } 

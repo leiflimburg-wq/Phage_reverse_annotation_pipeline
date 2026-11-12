@@ -5,20 +5,20 @@ process Combine_results
 
     tag "combines foldseek and folddisco files"
     
-    publishDir "$params.outputDir/output", pattern: "Additional_Hits.txt", mode: params.pubDirMode
+    publishDir "$params.outputDir/output", pattern: "*Additional_Hits.txt", mode: params.pubDirMode
 
 
     input:
-        path folddisco_matches
-        path foldseek_matches
+        tuple val(geneID), path(folddisco_matches), path(foldseek_matches)
 
     output: 
-        path "Additional_Hits.txt"
+        path "${geneID}_Additional_Hits.txt"
     script:
     """
     mkdir -p folddisco
-    cp ${folddisco_matches} folddisco/
-    python ${projectDir}/bin/src/combine_results.py --folddisco folddisco --foldseek ${foldseek_matches}
+    for file in ${folddisco_matches}; do
+        cp \$file folddisco/
+    python ${projectDir}/bin/src/combine_results.py --folddisco folddisco --foldseek ${foldseek_matches} --geneID ${geneID}
     """
 
 }

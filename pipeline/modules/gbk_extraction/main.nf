@@ -7,11 +7,11 @@ process GBKextraction
     publishDir "$params.outputDir/output", pattern: "combined_unannoted_aa_fasta/*.fasta", mode: params.pubDirMode
     
     input: 
-        path pholdAnnotation
+        tuple val(geneID), path(pholdAnnotation)
 
     output: 
-        path "combined_unannotated_aa_fasta/*.fasta", emit: unannoted_aa_fasta_combined
-        path "unannotated_aa_fasta/*.fasta", emit: singleProteinFastas
+        tuple val(geneID), path("combined_unannotated_aa_fasta/*.fasta"), emit: unannoted_aa_fasta_combined
+        tuple val(geneID), path("unannotated_aa_fasta/*.fasta"), emit: singleProteinFastas
 
     script:  
     """

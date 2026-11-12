@@ -5,31 +5,34 @@ include { FoldseekDB } from './modules/foldseekDB'
 include { FoldseekMatch } from './modules/foldseekMatch'
 include { SplitFasta } from './modules/split_Fasta'
 include { GBKextraction } from './modules/gbk_extraction'
-include { Folddisco_processing } from './modules/folddisco_processing'
+include { Folddisco_preprocessing } from './modules/folddisco_preprocessing'
 include { Folddisco_Match} from './modules/folddiscoMatch'
 include { Lolalign } from './modules/lolalign'
 include { Combine_results } from './modules/combine_results'
+include { Folddiso_postprocessing } from './modules/folddisco_postprocessing'
 
 workflow
 {
-    PharokkaAnnotate(params.phageGenome, params.pharokkaDB)
+    genomes = Channel.fromPath("${params.phageGenomeFolder}/*")
+    PharokkaAnnotate(genomes.flatten())
     PholdAnnotate(PharokkaAnnotate.out.pharokkaAnnotation,params.pholdDB)
 
     if (params.annotateAll == true)
     {
-        SplitFasta(PholdAnnotate.out.pholdaaAnnotation)
-        StructurePredict(SplitFasta.out.singleProteinFastas.flatten(), params.esm_model_cache)
+        StructurePredict(PholdAnnotate.out.pholdaaAnnotation, params.esm_model_cache)
     }
     else 
     {
         GBKextraction(PholdAnnotate.out.pholdAnnotation)
-        StructurePredict(GBKextraction.out.singleProteinFastas.flatten(), params.esm_model_cache)
+        StructurePredict(GBKextraction.out.singleProteinFastas.transpose(), params.esm_model_cache)
     }
-    FoldseekDB(StructurePredict.out.foldedProteins.collect())
-    FoldseekMatch(FoldseekDB.out.foldseekDB_phage.collect(), params.curatedDB)
+    FoldseekDB(StructurePredict.out.foldedProteins)
+    FoldseekMatch(FoldseekDB.out.foldseekDB_phage, params.curatedDB)
     curated_ch = Channel.fromPath("${params.curatedDB}/*.cif")
-    Folddisco_processing(curated_ch.flatten(),params.site_map)
-    Folddisco_Match(StructurePredict.out.foldedProteins.collect(),Folddisco_processing.out.preProc_folddisco)
+    Folddisco_preprocessing(curated_ch.flatten(),params.site_map)
+    Folddisco_Match(StructurePredict.out.foldedProteins.groupTuple().combine(Folddisco_preprocessing.out.preProc_folddisco))
     //Lolalign(FoldseekDB.out.foldseekDB_phage.collect(), params.curatedDB) //lolalign ist not yet available 
-    Combine_results(Folddisco_Match.out.folddisco_matches.collect(),FoldseekMatch.out.foldseek_matches)
+    Folddiso_postprocessing(Folddisco_Match.out.folddisco_matches.groupTuple().map{id,files -> tuple(id,files.flatten())})
+    //Combine_results(Folddisco_Match.out.folddisco_matches.groupTuple().join(FoldseekMatch.out.foldseek_matches))
+
 }

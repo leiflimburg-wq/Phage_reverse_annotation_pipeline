@@ -1,22 +1,22 @@
 process StructurePredict
 {
-    maxForks params.maxforks
+    maxForks params.esmForks
 
     conda "${params.conda_path}/ESMfoldCuda"
 
     tag "Predict protein structures from phold Annotation" 
 
-    publishDir "$params.outputDir/output", pattern: "folded_proteins/*.cif", mode: params.pubDirMode
+    //publishDir "$params.outputDir/output", pattern: "folded_proteins/*.cif", mode: params.pubDirMode
 
     input:
-        path singleProteinFastas
+        tuple val(geneID), path(pholdaaAnnotation)
         path esm_model_cache
         
     output:
-        path("folded_proteins/*.cif"), emit: foldedProteins
+        tuple val(geneID), path("folded_proteins/"), emit: foldedProteins
     
     script:
     """
-        python ${projectDir}/bin/src/esmfold2.py --singleFASTA ${singleProteinFastas} --esm_model_cache ${params.esm_model_cache} --cuda_device ${params.cuda_device}
+        python ${projectDir}/bin/src/esmfold2.py --aaFasta ${pholdaaAnnotation} --esm_model_cache ${params.esm_model_cache} --cuda_device ${params.cuda_device}
     """
 }

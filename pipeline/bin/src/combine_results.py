@@ -8,10 +8,11 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--folddisco', type = str)
     parser.add_argument('--foldseek', type = str)
+    parser.add_argument('--geneID', type = str)
     return parser.parse_args()
 args = get_args()
 
-combi_out = open("Additional_Hits.txt","w")
+combi_out = open(f"{args.geneID}_Additional_Hits.txt","w")
 folddisco_folder = Path(args.folddisco)
 
 
@@ -21,6 +22,7 @@ with open(args.foldseek,"r") as foldseek_in :
             foldseek_hit = line.strip()
             combi_out.write(foldseek_hit + "\n")
         combi_out.write("\n" + "\n" + "\n")
+        
 combi_out.write("Folddisco Hits:" + "\n" + "DB_Hit  unkonwn_protein_annotation_ID       node_count|tid|rmsd|matching_residues|query_residues" + "\n")
 
 for files in folddisco_folder.iterdir() :

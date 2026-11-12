@@ -11,11 +11,11 @@ process SplitFasta
 
     //recieves the aminoacid sequnces as anotated by phold
     input:
-        path pholdaaAnnotation
+        tuple val(geneID), path(pholdaaAnnotation)
     
     //emits all fastas in the splited_genomes folder (aka the single protein fastas) in the channel "singleProteinFastas"
     output:
-      path "splited_genomes/*.fasta" , emit: singleProteinFastas
+        tuple val(geneID), path("splited_genomes/*.fasta") , emit: singleProteinFastas
 
     // opens the python script
     script:

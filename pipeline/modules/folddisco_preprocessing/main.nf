@@ -1,7 +1,9 @@
-process Folddisco_processing
+process Folddisco_preprocessing
 {
-    conda "${params.conda_path}/python"
+    cache params.folddiscoCache
 
+    conda "${params.conda_path}/python"
+    
     tag "Assigns Sites to Proteins"
     
     input:
@@ -17,7 +19,7 @@ process Folddisco_processing
 
     script:
     """
-    python ${projectDir}/bin/src/folddsico_processing.py --queryProtein ${curated_ch} --site_map ${params.site_map}
+    python ${projectDir}/bin/src/folddsico_preprocessing.py --queryProtein ${curated_ch} --site_map ${params.site_map}
     """
 
 }

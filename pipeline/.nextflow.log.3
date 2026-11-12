@@ -1,760 +1,113 @@
-Nov-04 17:12:08.712 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
-Nov-04 17:12:08.958 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
-Nov-04 17:12:08.981 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/limburg/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
-Nov-04 17:12:09.007 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Nov-04 17:12:09.008 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Nov-04 17:12:09.011 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
-Nov-04 17:12:09.028 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
-Nov-04 17:12:09.146 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
-Nov-04 17:12:09.150 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Nov-04 17:12:09.173 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/nextflow.config
-Nov-04 17:12:09.175 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/nextflow.config
-Nov-04 17:12:09.180 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
-Nov-04 17:12:09.194 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Nov-04 17:12:09.548 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Nov-04 17:12:09.549 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Nov-04 17:12:09.566 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/limburg/.nextflow/secrets/store.json
-Nov-04 17:12:09.572 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@18b8d173] - activable => nextflow.secret.LocalSecretsProvider@18b8d173
-Nov-04 17:12:09.583 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [condescending_williams] - revision: 10b90fa99b
-Nov-04 17:12:09.653 [main] DEBUG nextflow.Session - Session UUID: d7134ede-9e1a-42d0-809e-bda496de57f3
-Nov-04 17:12:09.653 [main] DEBUG nextflow.Session - Run name: condescending_williams
-Nov-04 17:12:09.654 [main] DEBUG nextflow.Session - Executor pool size: 224
-Nov-04 17:12:09.661 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Nov-04 17:12:09.666 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=672; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Nov-04 17:12:09.684 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-12 14:19:38.671 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
+Nov-12 14:19:38.881 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
+Nov-12 14:19:38.899 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/limburg/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
+Nov-12 14:19:38.917 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-12 14:19:38.917 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-12 14:19:38.919 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Nov-12 14:19:38.935 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Nov-12 14:19:39.034 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Nov-12 14:19:39.038 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-12 14:19:39.059 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/nextflow.config
+Nov-12 14:19:39.061 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/nextflow.config
+Nov-12 14:19:39.064 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Nov-12 14:19:39.076 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Nov-12 14:19:39.417 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-12 14:19:39.417 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-12 14:19:39.429 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/limburg/.nextflow/secrets/store.json
+Nov-12 14:19:39.432 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@67e13bd0] - activable => nextflow.secret.LocalSecretsProvider@67e13bd0
+Nov-12 14:19:39.442 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [sick_goldberg] - revision: 2e21040a50
+Nov-12 14:19:39.503 [main] DEBUG nextflow.Session - Session UUID: 64e91b70-cbb9-471a-a520-01f3998c7367
+Nov-12 14:19:39.504 [main] DEBUG nextflow.Session - Run name: sick_goldberg
+Nov-12 14:19:39.504 [main] DEBUG nextflow.Session - Executor pool size: 224
+Nov-12 14:19:39.511 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-12 14:19:39.515 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=672; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-12 14:19:39.533 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 26.04.6 build 12646
   Created: 09-07-2026 18:49 UTC (20:49 CEST)
   System: Linux 6.8.0-147-generic
   Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 25.0.2-internal-adhoc.rattler.src
   Encoding: UTF-8 (UTF-8)
-  Process: 2502593@data [127.0.1.1]
-  CPUs: 224 - Mem: 2.2 TB (788.5 GB) - Swap: 8 GB (7.3 GB)
-Nov-04 17:12:09.729 [main] DEBUG nextflow.Session - Work-dir: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/work [ceph]
-Nov-04 17:12:09.762 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Nov-04 17:12:09.778 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
-Nov-04 17:12:09.781 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
-Nov-04 17:12:09.824 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Nov-04 17:12:09.832 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 225; maxThreads: 1000
-Nov-04 17:12:10.125 [main] DEBUG nextflow.Session - Session start
-Nov-04 17:12:10.131 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
-Nov-04 17:12:10.570 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Nov-04 17:12:10.771 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.771 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.779 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Nov-04 17:12:10.786 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=224; memory=2.2 TB; capacity=224; pollInterval=100ms; dumpInterval=5m
-Nov-04 17:12:10.788 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Nov-04 17:12:10.830 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'PharokkaAnnotate': maxForks=0; fair=false; array=0
-Nov-04 17:12:10.901 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.902 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.903 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'PholdAnnotate': maxForks=0; fair=false; array=0
-Nov-04 17:12:10.907 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.908 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.909 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SplitFasta': maxForks=0; fair=false; array=0
-Nov-04 17:12:10.924 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.924 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.926 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'StructurePredict': maxForks=1; fair=false; array=0
-Nov-04 17:12:10.937 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.938 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.938 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FoldseekDB': maxForks=0; fair=false; array=0
-Nov-04 17:12:10.943 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.943 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.943 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FoldseekMatch': maxForks=0; fair=false; array=0
-Nov-04 17:12:10.959 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.959 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.960 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'Folddisco_processing': maxForks=0; fair=false; array=0
-Nov-04 17:12:10.966 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.966 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.967 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'Folddisco_Match': maxForks=0; fair=false; array=0
-Nov-04 17:12:10.972 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Nov-04 17:12:10.972 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Nov-04 17:12:10.973 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'Combine_results': maxForks=0; fair=false; array=0
-Nov-04 17:12:10.975 [main] DEBUG nextflow.Session - Process names: PholdAnnotate, Folddisco_processing, GBKextraction, Folddisco_Match, StructurePredict, SplitFasta, FoldseekDB, FoldseekMatch, Lolalign, Combine_results, PharokkaAnnotate
-Nov-04 17:12:10.977 [main] DEBUG nextflow.Session - Igniting dataflow network (10)
-Nov-04 17:12:10.977 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PharokkaAnnotate
-Nov-04 17:12:10.978 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > PholdAnnotate
-Nov-04 17:12:10.978 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SplitFasta
-Nov-04 17:12:10.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > StructurePredict
-Nov-04 17:12:10.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FoldseekDB
-Nov-04 17:12:10.979 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FoldseekMatch
-Nov-04 17:12:10.985 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Folddisco_processing
-Nov-04 17:12:10.985 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Folddisco_Match
-Nov-04 17:12:10.986 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Combine_results
-Nov-04 17:12:10.986 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /ceph/ibmi/ipb/students/limburg/curated_DB/testset/; pattern: *.cif; options: [:]
-Nov-04 17:12:10.987 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Process: 2860170@data [127.0.1.1]
+  CPUs: 224 - Mem: 2.2 TB (544.5 GB) - Swap: 8 GB (65.4 MB)
+Nov-12 14:19:39.579 [main] DEBUG nextflow.Session - Work-dir: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/work [ceph]
+Nov-12 14:19:39.605 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-12 14:19:39.613 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-12 14:19:39.614 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Nov-12 14:19:39.645 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-12 14:19:39.651 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 225; maxThreads: 1000
+Nov-12 14:19:39.830 [main] DEBUG nextflow.Session - Session start
+Nov-12 14:19:39.837 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Nov-12 14:19:40.292 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-12 14:19:40.469 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-12 14:19:40.470 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-12 14:19:40.475 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-12 14:19:40.481 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=224; memory=2.2 TB; capacity=224; pollInterval=100ms; dumpInterval=5m
+Nov-12 14:19:40.482 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-12 14:19:40.513 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'PharokkaAnnotate': maxForks=4; fair=false; array=0
+Nov-12 14:19:40.554 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-12 14:19:40.554 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-12 14:19:40.556 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'PholdAnnotate': maxForks=4; fair=false; array=0
+Nov-12 14:19:40.560 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-12 14:19:40.561 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-12 14:19:40.562 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'StructurePredict': maxForks=1; fair=false; array=0
+Nov-12 14:19:40.564 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-12 14:19:40.564 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-12 14:19:40.565 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FoldseekDB': maxForks=4; fair=false; array=0
+Nov-12 14:19:40.567 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-12 14:19:40.567 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-12 14:19:40.568 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FoldseekMatch': maxForks=4; fair=false; array=0
+Nov-12 14:19:40.573 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-12 14:19:40.573 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-12 14:19:40.574 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'Folddisco_preprocessing': maxForks=0; fair=false; array=0
+Nov-12 14:19:40.601 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-12 14:19:40.601 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-12 14:19:40.602 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'Folddisco_Match': maxForks=4; fair=false; array=0
+Nov-12 14:19:40.605 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
   _nf_script_fe2a1da4f33769a6: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/split_Fasta/main.nf
-  _nf_script_64c7caeccdf1a817: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/foldseekDB/main.nf
   _nf_script_ceaddeb4d25edd68: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/foldseekMatch/main.nf
-  _nf_script_b896eff5c9bc3dc2: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/phold/main.nf
   _nf_script_b2ffed09d65341f5: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/pharokka/main.nf
   _nf_script_ec3f53b9df668aa7: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/combine_results/main.nf
-  _nf_script_a1a99099cf4fd4ae: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/lolalign/main.nf
-  _nf_script_f98f5225ed6a9467: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/folddisco_processing/main.nf
-  _nf_script_1f26c5a031e2a4d0: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/folddiscoMatch/main.nf
+  _nf_script_83dcaaddbb968e08: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/folddisco_postprocessing/main.nf
   _nf_script_fe00cb72ed96ba6b: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/gbk_extraction/main.nf
+  _nf_script_64c7caeccdf1a817: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/foldseekDB/main.nf
+  _nf_script_b896eff5c9bc3dc2: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/phold/main.nf
+  _nf_script_15276e646ff08195: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/folddisco_preprocessing/main.nf
+  _nf_script_a1a99099cf4fd4ae: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/lolalign/main.nf
+  _nf_script_1f26c5a031e2a4d0: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/folddiscoMatch/main.nf
   _nf_script_40ab7171ba7b32f9: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/modules/structure_predict/main.nf
   Main: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/main.nf
-Nov-04 17:12:10.987 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Nov-04 17:12:10.987 [main] DEBUG nextflow.Session - Session await
-Nov-04 17:12:11.214 [Actor Thread 34] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 26] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 32] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 42] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 22] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 18] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/pharokka - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 40] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 38] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 24] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 28] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 36] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.214 [Actor Thread 30] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.218 [Actor Thread 44] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python; path=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python
-Nov-04 17:12:11.218 [Actor Thread 45] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/pharokka; path=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/pharokka
-Nov-04 17:12:11.330 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [7f/ba7287] Cached process > PharokkaAnnotate (Annotate Genome with Pharokka)
-Nov-04 17:12:11.356 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [3b/e16bea] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.356 [Actor Thread 28] INFO  nextflow.processor.TaskProcessor - [e8/006a48] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.357 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [ac/788bc9] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.357 [Actor Thread 38] INFO  nextflow.processor.TaskProcessor - [d9/ebf626] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.357 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [6d/52c542] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.357 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [60/56beb9] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.357 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [fb/6e5efc] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.357 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [04/c7fcef] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.357 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [32/f8fdec] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.357 [Actor Thread 49] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/pholdENV - Is a directory
-Nov-04 17:12:11.357 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [bf/e35b9c] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.358 [Actor Thread 52] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/pholdENV; path=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/pholdENV
-Nov-04 17:12:11.358 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [a6/47129d] Cached process > Folddisco_processing (Assigns Sites to Proteins)
-Nov-04 17:12:11.359 [Actor Thread 18] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=672; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Nov-04 17:12:11.371 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [70/ca3c42] Cached process > PholdAnnotate (Annotate Genome with Phold)
-Nov-04 17:12:11.377 [Actor Thread 68] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:11.397 [Actor Thread 68] INFO  nextflow.processor.TaskProcessor - [59/67ddc6] Cached process > SplitFasta (split genome fasta from phold into single protein fastas)
-Nov-04 17:12:11.443 [Actor Thread 74] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 106] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.444 [Actor Thread 182] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 158] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 80] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.444 [Actor Thread 104] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 172] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 128] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 124] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.444 [Actor Thread 85] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.444 [Actor Thread 178] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 176] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 168] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.444 [Actor Thread 122] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.443 [Actor Thread 180] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.444 [Actor Thread 189] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda; path=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda
-Nov-04 17:12:11.446 [Actor Thread 118] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.447 [Actor Thread 108] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.447 [Actor Thread 191] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.444 [Actor Thread 110] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.448 [Actor Thread 113] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.448 [Actor Thread 120] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.444 [Actor Thread 102] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.448 [Actor Thread 78] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.449 [Actor Thread 186] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.450 [Actor Thread 184] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.448 [Actor Thread 116] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.448 [Actor Thread 114] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.449 [Actor Thread 81] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.450 [Actor Thread 188] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.451 [Actor Thread 76] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.451 [Actor Thread 94] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.451 [Actor Thread 93] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.451 [Actor Thread 89] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.452 [Actor Thread 87] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.453 [Actor Thread 91] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.455 [Actor Thread 193] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.455 [Actor Thread 83] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.457 [Actor Thread 106] INFO  nextflow.processor.TaskProcessor - [61/686a04] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.457 [Actor Thread 98] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.457 [Actor Thread 199] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.457 [Actor Thread 113] INFO  nextflow.processor.TaskProcessor - [5e/3d880d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.457 [Actor Thread 124] INFO  nextflow.processor.TaskProcessor - [b2/f78867] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.457 [Actor Thread 195] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.457 [Actor Thread 110] INFO  nextflow.processor.TaskProcessor - [4a/542ae4] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.457 [Actor Thread 87] INFO  nextflow.processor.TaskProcessor - [6e/a3a633] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.457 [Actor Thread 172] INFO  nextflow.processor.TaskProcessor - [19/7eef13] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.458 [Actor Thread 184] INFO  nextflow.processor.TaskProcessor - [6f/7ebdb4] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.458 [Actor Thread 194] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.459 [Actor Thread 118] INFO  nextflow.processor.TaskProcessor - [fc/74881b] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.459 [Actor Thread 132] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.459 [Actor Thread 85] INFO  nextflow.processor.TaskProcessor - [85/ce6f9f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.459 [Actor Thread 197] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.460 [Actor Thread 112] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.460 [Actor Thread 100] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.460 [Actor Thread 186] INFO  nextflow.processor.TaskProcessor - [a0/35605c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.461 [Actor Thread 138] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.461 [Actor Thread 74] INFO  nextflow.processor.TaskProcessor - [ba/2beba7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.461 [Actor Thread 182] INFO  nextflow.processor.TaskProcessor - [31/c7065e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.462 [Actor Thread 78] INFO  nextflow.processor.TaskProcessor - [8e/9743c7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.462 [Actor Thread 193] INFO  nextflow.processor.TaskProcessor - [f8/7f3070] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.462 [Actor Thread 178] INFO  nextflow.processor.TaskProcessor - [c9/c0db80] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.459 [Actor Thread 120] INFO  nextflow.processor.TaskProcessor - [df/13b4f5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.463 [Actor Thread 96] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.463 [Actor Thread 140] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.463 [Actor Thread 136] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.463 [Actor Thread 130] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.463 [Actor Thread 152] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.463 [Actor Thread 148] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.464 [Actor Thread 150] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.464 [Actor Thread 108] INFO  nextflow.processor.TaskProcessor - [4b/4b5f6d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.464 [Actor Thread 83] INFO  nextflow.processor.TaskProcessor - [17/ecd9b1] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.465 [Actor Thread 206] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.465 [Actor Thread 201] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.466 [Actor Thread 156] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.466 [Actor Thread 146] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.467 [Actor Thread 122] INFO  nextflow.processor.TaskProcessor - [d6/d27c52] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.467 [Actor Thread 144] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.467 [Actor Thread 138] INFO  nextflow.processor.TaskProcessor - [18/6cf91f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.467 [Actor Thread 158] INFO  nextflow.processor.TaskProcessor - [0d/152794] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.467 [Actor Thread 102] INFO  nextflow.processor.TaskProcessor - [c7/05be68] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.468 [Actor Thread 191] INFO  nextflow.processor.TaskProcessor - [a8/3d3481] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.467 [Actor Thread 195] INFO  nextflow.processor.TaskProcessor - [39/9328b7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.468 [Actor Thread 211] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.468 [Actor Thread 170] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.468 [Actor Thread 142] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.468 [Actor Thread 164] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.469 [Actor Thread 154] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.469 [Actor Thread 126] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.469 [Actor Thread 160] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.469 [Actor Thread 134] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.469 [Actor Thread 162] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.469 [Actor Thread 174] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.470 [Actor Thread 166] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.470 [Actor Thread 209] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.471 [Actor Thread 214] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.474 [Actor Thread 221] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.474 [Actor Thread 218] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.475 [Actor Thread 223] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.475 [Actor Thread 215] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.475 [Actor Thread 224] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.476 [Actor Thread 222] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.476 [Actor Thread 199] INFO  nextflow.processor.TaskProcessor - [25/7821a8] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.476 [Actor Thread 81] INFO  nextflow.processor.TaskProcessor - [b1/bbb5a6] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.480 [Actor Thread 223] INFO  nextflow.processor.TaskProcessor - [b2/5afc6c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.480 [Actor Thread 128] INFO  nextflow.processor.TaskProcessor - [19/e754bd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.480 [Actor Thread 100] INFO  nextflow.processor.TaskProcessor - [93/69b93a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.481 [Actor Thread 220] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.482 [Actor Thread 197] INFO  nextflow.processor.TaskProcessor - [32/e01010] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.483 [Actor Thread 180] INFO  nextflow.processor.TaskProcessor - [4f/4b253a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.483 [Actor Thread 93] INFO  nextflow.processor.TaskProcessor - [da/902f36] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.479 [Actor Thread 176] INFO  nextflow.processor.TaskProcessor - [84/a161b9] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.490 [Actor Thread 188] INFO  nextflow.processor.TaskProcessor - [57/ae138d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.493 [Actor Thread 126] INFO  nextflow.processor.TaskProcessor - [03/03cba4] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.493 [Actor Thread 162] INFO  nextflow.processor.TaskProcessor - [99/1190db] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.493 [Actor Thread 168] INFO  nextflow.processor.TaskProcessor - [70/4265ee] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.493 [Actor Thread 214] INFO  nextflow.processor.TaskProcessor - [02/68d995] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.493 [Actor Thread 206] INFO  nextflow.processor.TaskProcessor - [a4/a77e04] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.494 [Actor Thread 132] INFO  nextflow.processor.TaskProcessor - [53/20dea9] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.507 [Actor Thread 89] INFO  nextflow.processor.TaskProcessor - [98/2b2254] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.507 [Actor Thread 140] INFO  nextflow.processor.TaskProcessor - [4e/835e9f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.507 [Actor Thread 221] INFO  nextflow.processor.TaskProcessor - [d8/c0a646] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.507 [Actor Thread 152] INFO  nextflow.processor.TaskProcessor - [1f/9befe0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.509 [Actor Thread 201] INFO  nextflow.processor.TaskProcessor - [49/bd1cc2] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.510 [Actor Thread 134] INFO  nextflow.processor.TaskProcessor - [f0/cafd63] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.512 [Actor Thread 76] INFO  nextflow.processor.TaskProcessor - [cc/1ea45f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.507 [Actor Thread 80] INFO  nextflow.processor.TaskProcessor - [cf/500e5a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.513 [Actor Thread 96] INFO  nextflow.processor.TaskProcessor - [a7/242f0b] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.513 [Actor Thread 174] INFO  nextflow.processor.TaskProcessor - [a5/2801f3] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.514 [Actor Thread 209] INFO  nextflow.processor.TaskProcessor - [01/cec147] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.515 [Actor Thread 168] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.515 [Actor Thread 220] INFO  nextflow.processor.TaskProcessor - [c9/750fba] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.510 [Actor Thread 136] INFO  nextflow.processor.TaskProcessor - [be/2126a3] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.515 [Actor Thread 197] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.516 [Actor Thread 81] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.516 [Actor Thread 100] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.516 [Actor Thread 126] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.516 [Actor Thread 138] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.516 [Actor Thread 132] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.516 [Actor Thread 214] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.517 [Actor Thread 180] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.517 [Actor Thread 128] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.519 [Actor Thread 223] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.520 [Actor Thread 194] INFO  nextflow.processor.TaskProcessor - [38/d9e0dc] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.521 [Actor Thread 152] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.521 [Actor Thread 146] INFO  nextflow.processor.TaskProcessor - [0b/61c01b] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.522 [Actor Thread 176] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.524 [Actor Thread 206] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.524 [Actor Thread 138] INFO  nextflow.processor.TaskProcessor - [39/b7cb54] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.525 [Actor Thread 100] INFO  nextflow.processor.TaskProcessor - [cf/9c11a0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.526 [Actor Thread 193] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.526 [Actor Thread 150] INFO  nextflow.processor.TaskProcessor - [4f/9a34c4] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.526 [Actor Thread 142] INFO  nextflow.processor.TaskProcessor - [63/c998d2] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.526 [Actor Thread 126] INFO  nextflow.processor.TaskProcessor - [5c/fc52da] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.527 [Actor Thread 154] INFO  nextflow.processor.TaskProcessor - [96/d3e582] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.527 [Actor Thread 104] INFO  nextflow.processor.TaskProcessor - [32/89ccd5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.524 [Actor Thread 191] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.526 [Actor Thread 89] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.526 [Actor Thread 81] INFO  nextflow.processor.TaskProcessor - [33/51504c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.526 [Actor Thread 170] INFO  nextflow.processor.TaskProcessor - [c6/1699dd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.528 [Actor Thread 182] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.528 [Actor Thread 218] INFO  nextflow.processor.TaskProcessor - [d6/79db2a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.528 [Actor Thread 164] INFO  nextflow.processor.TaskProcessor - [fb/d7ab75] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.528 [Actor Thread 158] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.529 [Actor Thread 113] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.530 [Actor Thread 120] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.530 [Actor Thread 166] INFO  nextflow.processor.TaskProcessor - [ad/3ee70e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.530 [Actor Thread 98] INFO  nextflow.processor.TaskProcessor - [dc/59a3d1] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.530 [Actor Thread 74] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.530 [Actor Thread 197] INFO  nextflow.processor.TaskProcessor - [bb/7ccab0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.530 [Actor Thread 152] INFO  nextflow.processor.TaskProcessor - [a1/c75c36] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.530 [Actor Thread 100] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.531 [Actor Thread 221] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.532 [Actor Thread 128] INFO  nextflow.processor.TaskProcessor - [1f/a2f90d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.532 [Actor Thread 215] INFO  nextflow.processor.TaskProcessor - [8b/7817f3] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.532 [Actor Thread 162] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.533 [Actor Thread 148] INFO  nextflow.processor.TaskProcessor - [71/a9f8df] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.534 [Actor Thread 156] INFO  nextflow.processor.TaskProcessor - [c9/5df709] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.534 [Actor Thread 116] INFO  nextflow.processor.TaskProcessor - [60/03f5a7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.535 [Actor Thread 223] INFO  nextflow.processor.TaskProcessor - [a5/46688f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.535 [Actor Thread 114] INFO  nextflow.processor.TaskProcessor - [6a/7f38ef] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.535 [Actor Thread 206] INFO  nextflow.processor.TaskProcessor - [39/984e24] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.536 [Actor Thread 112] INFO  nextflow.processor.TaskProcessor - [89/083890] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.537 [Actor Thread 91] INFO  nextflow.processor.TaskProcessor - [3d/eea61a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.537 [Actor Thread 144] INFO  nextflow.processor.TaskProcessor - [79/43734d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.537 [Actor Thread 108] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.537 [Actor Thread 176] INFO  nextflow.processor.TaskProcessor - [50/784849] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.537 [Actor Thread 195] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.537 [Actor Thread 146] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.537 [Actor Thread 98] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.538 [Actor Thread 83] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.524 [Actor Thread 214] INFO  nextflow.processor.TaskProcessor - [6f/79af06] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.538 [Actor Thread 140] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.538 [Actor Thread 211] INFO  nextflow.processor.TaskProcessor - [d6/0fd6d3] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.540 [Actor Thread 224] INFO  nextflow.processor.TaskProcessor - [eb/588ac5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.540 [Actor Thread 199] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.540 [Actor Thread 100] INFO  nextflow.processor.TaskProcessor - [ac/586911] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.540 [Actor Thread 180] INFO  nextflow.processor.TaskProcessor - [28/0220fb] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.540 [Actor Thread 168] INFO  nextflow.processor.TaskProcessor - [7b/5194e9] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.540 [Actor Thread 193] INFO  nextflow.processor.TaskProcessor - [0f/496b3c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.541 [Actor Thread 194] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.541 [Actor Thread 74] INFO  nextflow.processor.TaskProcessor - [59/75dca8] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.541 [Actor Thread 221] INFO  nextflow.processor.TaskProcessor - [e5/50ab3b] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.541 [Actor Thread 160] INFO  nextflow.processor.TaskProcessor - [7a/8facd8] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.542 [Actor Thread 182] INFO  nextflow.processor.TaskProcessor - [f0/628bd6] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.542 [Actor Thread 94] INFO  nextflow.processor.TaskProcessor - [b4/105997] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.542 [Actor Thread 162] INFO  nextflow.processor.TaskProcessor - [09/b0430c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.542 [Actor Thread 132] INFO  nextflow.processor.TaskProcessor - [c2/6c2c21] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.542 [Actor Thread 138] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.543 [Actor Thread 222] INFO  nextflow.processor.TaskProcessor - [4b/be41d7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.544 [Actor Thread 140] INFO  nextflow.processor.TaskProcessor - [44/2212ff] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.546 [Actor Thread 146] INFO  nextflow.processor.TaskProcessor - [dc/ffb8b7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.548 [Actor Thread 120] INFO  nextflow.processor.TaskProcessor - [6f/379005] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.548 [Actor Thread 98] INFO  nextflow.processor.TaskProcessor - [d1/156f01] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.548 [Actor Thread 138] INFO  nextflow.processor.TaskProcessor - [03/7c30c3] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.547 [Actor Thread 158] INFO  nextflow.processor.TaskProcessor - [52/f91987] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.548 [Actor Thread 199] INFO  nextflow.processor.TaskProcessor - [d0/dc1786] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.549 [Actor Thread 191] INFO  nextflow.processor.TaskProcessor - [05/0a7185] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.549 [Actor Thread 83] INFO  nextflow.processor.TaskProcessor - [8b/28fb5c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.550 [Actor Thread 89] INFO  nextflow.processor.TaskProcessor - [f6/0c2dc0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.552 [Actor Thread 130] INFO  nextflow.processor.TaskProcessor - [d0/e38085] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.553 [Actor Thread 108] INFO  nextflow.processor.TaskProcessor - [19/154566] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.553 [Actor Thread 113] INFO  nextflow.processor.TaskProcessor - [26/bc1d79] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.556 [Actor Thread 195] INFO  nextflow.processor.TaskProcessor - [af/68cdab] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.560 [Actor Thread 138] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.560 [Actor Thread 81] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.560 [Actor Thread 174] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.560 [Actor Thread 148] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.560 [Actor Thread 76] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 191] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 220] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 80] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 104] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 74] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 142] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.562 [Actor Thread 214] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 112] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 224] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 150] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 134] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 184] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 152] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.561 [Actor Thread 182] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.562 [Actor Thread 194] INFO  nextflow.processor.TaskProcessor - [8a/895539] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.564 [Actor Thread 222] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.565 [Actor Thread 221] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.565 [Actor Thread 78] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.565 [Actor Thread 93] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.565 [Actor Thread 201] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.566 [Actor Thread 87] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.567 [Actor Thread 219] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.567 [Actor Thread 216] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.567 [Actor Thread 156] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.567 [Actor Thread 122] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.567 [Actor Thread 218] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.571 [Actor Thread 211] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.572 [Actor Thread 164] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.574 [Actor Thread 152] INFO  nextflow.processor.TaskProcessor - [15/ceda3a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.574 [Actor Thread 209] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.574 [Actor Thread 128] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.575 [Actor Thread 112] INFO  nextflow.processor.TaskProcessor - [a8/4030a1] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.567 [Actor Thread 195] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.567 [Actor Thread 166] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.567 [Actor Thread 180] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.568 [Actor Thread 212] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.568 [Actor Thread 89] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.568 [Actor Thread 223] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.568 [Actor Thread 108] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.569 [Actor Thread 213] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.569 [Actor Thread 102] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.570 [Actor Thread 225] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.574 [Actor Thread 215] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.578 [Actor Thread 138] INFO  nextflow.processor.TaskProcessor - [0c/013234] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.577 [Actor Thread 160] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.577 [Actor Thread 191] INFO  nextflow.processor.TaskProcessor - [08/755afd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.578 [Actor Thread 96] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.578 [Actor Thread 74] INFO  nextflow.processor.TaskProcessor - [00/b6522c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.578 [Actor Thread 222] INFO  nextflow.processor.TaskProcessor - [a1/c8c849] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.578 [Actor Thread 154] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.578 [Actor Thread 178] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.579 [Actor Thread 114] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.579 [Actor Thread 93] INFO  nextflow.processor.TaskProcessor - [9e/5bf915] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.579 [Actor Thread 219] INFO  nextflow.processor.TaskProcessor - [f9/430556] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.579 [Actor Thread 182] INFO  nextflow.processor.TaskProcessor - [1b/ab74ab] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.580 [Actor Thread 126] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.580 [Actor Thread 118] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.580 [Actor Thread 100] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.580 [Actor Thread 76] INFO  nextflow.processor.TaskProcessor - [64/25d3f5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.580 [Actor Thread 134] INFO  nextflow.processor.TaskProcessor - [5b/5cb6c3] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.580 [Actor Thread 193] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.580 [Actor Thread 78] INFO  nextflow.processor.TaskProcessor - [0e/2d0625] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.580 [Actor Thread 201] INFO  nextflow.processor.TaskProcessor - [b7/e83a2c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.581 [Actor Thread 120] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.581 [Actor Thread 80] INFO  nextflow.processor.TaskProcessor - [06/802a0c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.581 [Actor Thread 94] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.581 [Actor Thread 186] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.582 [Actor Thread 87] INFO  nextflow.processor.TaskProcessor - [49/1366d0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.582 [Actor Thread 224] INFO  nextflow.processor.TaskProcessor - [ee/82ab66] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.582 [Actor Thread 148] INFO  nextflow.processor.TaskProcessor - [fd/d4d927] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.580 [Actor Thread 174] INFO  nextflow.processor.TaskProcessor - [f1/5033df] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.580 [Actor Thread 146] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.580 [Actor Thread 170] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.582 [Actor Thread 104] INFO  nextflow.processor.TaskProcessor - [94/779e9d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.582 [Actor Thread 221] INFO  nextflow.processor.TaskProcessor - [5a/52587d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.582 [Actor Thread 176] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.582 [Actor Thread 197] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.582 [Actor Thread 216] INFO  nextflow.processor.TaskProcessor - [5c/6bdce6] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.583 [Actor Thread 218] INFO  nextflow.processor.TaskProcessor - [d2/c9308c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.583 [Actor Thread 81] INFO  nextflow.processor.TaskProcessor - [49/1f0119] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.580 [Actor Thread 91] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.581 [Actor Thread 210] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.581 [Actor Thread 98] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.581 [Actor Thread 206] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.581 [Actor Thread 113] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.581 [Actor Thread 168] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.582 [Actor Thread 132] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.582 [Actor Thread 106] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.584 [Actor Thread 116] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.584 [Actor Thread 150] INFO  nextflow.processor.TaskProcessor - [17/541a39] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.584 [Actor Thread 211] INFO  nextflow.processor.TaskProcessor - [45/c8d473] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.582 [Actor Thread 122] INFO  nextflow.processor.TaskProcessor - [2d/26a76f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.583 [Actor Thread 156] INFO  nextflow.processor.TaskProcessor - [2d/006348] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.585 [Actor Thread 162] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.586 [Actor Thread 220] INFO  nextflow.processor.TaskProcessor - [dc/ddcf36] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.586 [Actor Thread 184] INFO  nextflow.processor.TaskProcessor - [2c/573ab5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.586 [Actor Thread 158] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.586 [Actor Thread 144] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.586 [Actor Thread 142] INFO  nextflow.processor.TaskProcessor - [fc/ea1218] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.588 [Actor Thread 136] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.588 [Actor Thread 196] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.589 [Actor Thread 124] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.589 [Actor Thread 165] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.589 [Actor Thread 110] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.590 [Actor Thread 85] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.590 [Actor Thread 205] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.591 [Actor Thread 192] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.591 [Actor Thread 208] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.591 [Actor Thread 140] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.591 [Actor Thread 214] INFO  nextflow.processor.TaskProcessor - [e5/b1b141] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.592 [Actor Thread 185] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.592 [Actor Thread 171] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.592 [Actor Thread 164] INFO  nextflow.processor.TaskProcessor - [a4/0088b0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.592 [Actor Thread 217] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.592 [Actor Thread 172] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.593 [Actor Thread 173] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.593 [Actor Thread 149] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.593 [Actor Thread 145] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.594 [Actor Thread 153] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.594 [Actor Thread 155] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.595 [Actor Thread 179] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.596 [Actor Thread 151] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.596 [Actor Thread 111] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.596 [Actor Thread 115] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.597 [Actor Thread 167] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.597 [Actor Thread 163] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.597 [Actor Thread 161] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.598 [Actor Thread 135] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.598 [Actor Thread 147] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.599 [Actor Thread 133] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.600 [Actor Thread 129] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.601 [Actor Thread 200] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.601 [Actor Thread 131] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.601 [Actor Thread 207] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.601 [Actor Thread 177] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.601 [Actor Thread 159] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.601 [Actor Thread 194] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.602 [Actor Thread 190] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.603 [Actor Thread 66] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.604 [Actor Thread 107] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.604 [Actor Thread 123] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.604 [Actor Thread 130] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.604 [Actor Thread 71] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.605 [Actor Thread 181] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.605 [Actor Thread 88] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.606 [Actor Thread 92] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.606 [Actor Thread 175] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.606 [Actor Thread 199] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.606 [Actor Thread 121] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.606 [Actor Thread 169] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.607 [Actor Thread 90] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.607 [Actor Thread 49] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.607 [Actor Thread 97] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.607 [Actor Thread 64] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.607 [Actor Thread 143] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.608 [Actor Thread 73] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.609 [Actor Thread 105] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.609 [Actor Thread 187] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.609 [Actor Thread 117] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.610 [Actor Thread 77] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.610 [Actor Thread 109] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.610 [Actor Thread 203] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.610 [Actor Thread 69] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.611 [Actor Thread 84] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.611 [Actor Thread 70] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.611 [Actor Thread 103] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.611 [Actor Thread 95] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.611 [Actor Thread 68] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.611 [Actor Thread 82] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.612 [Actor Thread 119] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.612 [Actor Thread 99] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.612 [Actor Thread 79] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.612 [Actor Thread 198] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.613 [Actor Thread 183] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.613 [Actor Thread 101] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.614 [Actor Thread 139] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.614 [Actor Thread 67] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.614 [Actor Thread 141] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.614 [Actor Thread 34] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.614 [Actor Thread 188] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.615 [Actor Thread 42] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.615 [Actor Thread 63] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.616 [Actor Thread 36] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.616 [Actor Thread 30] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.616 [Actor Thread 56] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.616 [Actor Thread 51] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.616 [Actor Thread 40] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.616 [Actor Thread 22] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.617 [Actor Thread 58] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.617 [Actor Thread 7] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.617 [Actor Thread 32] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.617 [Actor Thread 125] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.618 [Actor Thread 189] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.618 [Actor Thread 86] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.618 [Actor Thread 127] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.618 [Actor Thread 47] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.618 [Actor Thread 204] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.618 [Actor Thread 57] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.618 [Actor Thread 60] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.617 [Actor Thread 62] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.619 [Actor Thread 59] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.620 [Actor Thread 61] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.620 [Actor Thread 18] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.620 [Actor Thread 26] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.622 [Actor Thread 83] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.625 [Actor Thread 75] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.625 [Actor Thread 137] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.628 [Actor Thread 65] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.629 [Actor Thread 55] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.630 [Actor Thread 157] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/ESMfoldCuda - Is a directory
-Nov-04 17:12:11.630 [Actor Thread 195] INFO  nextflow.processor.TaskProcessor - [4c/10dab5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.631 [Actor Thread 180] INFO  nextflow.processor.TaskProcessor - [64/60ef1e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.632 [Actor Thread 65] INFO  nextflow.processor.TaskProcessor - [1f/99ecce] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.634 [Actor Thread 55] INFO  nextflow.processor.TaskProcessor - [b0/2444d0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.634 [Actor Thread 128] INFO  nextflow.processor.TaskProcessor - [34/469ecd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.634 [Actor Thread 157] INFO  nextflow.processor.TaskProcessor - [92/244b9f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.636 [Actor Thread 166] INFO  nextflow.processor.TaskProcessor - [72/1f32ed] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.637 [Actor Thread 209] INFO  nextflow.processor.TaskProcessor - [16/9bc7a5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.640 [Actor Thread 223] INFO  nextflow.processor.TaskProcessor - [11/f7be14] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.641 [Actor Thread 102] INFO  nextflow.processor.TaskProcessor - [3f/c9c0ff] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.641 [Actor Thread 108] INFO  nextflow.processor.TaskProcessor - [a9/ddda68] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.642 [Actor Thread 215] INFO  nextflow.processor.TaskProcessor - [58/7786fd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.643 [Actor Thread 89] INFO  nextflow.processor.TaskProcessor - [dc/521174] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.644 [Actor Thread 212] INFO  nextflow.processor.TaskProcessor - [4e/2e420d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.644 [Actor Thread 160] INFO  nextflow.processor.TaskProcessor - [42/cb88a0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.644 [Actor Thread 96] INFO  nextflow.processor.TaskProcessor - [b8/7d6a3a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.645 [Actor Thread 225] INFO  nextflow.processor.TaskProcessor - [ad/da940a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.645 [Actor Thread 213] INFO  nextflow.processor.TaskProcessor - [3c/d9dff9] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.646 [Actor Thread 126] INFO  nextflow.processor.TaskProcessor - [ca/ddff6c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.646 [Actor Thread 178] INFO  nextflow.processor.TaskProcessor - [2c/99db59] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.646 [Actor Thread 114] INFO  nextflow.processor.TaskProcessor - [37/999e54] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.647 [Actor Thread 154] INFO  nextflow.processor.TaskProcessor - [d8/154649] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.653 [Actor Thread 120] INFO  nextflow.processor.TaskProcessor - [65/bbc2ef] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.653 [Actor Thread 170] INFO  nextflow.processor.TaskProcessor - [de/cc67ab] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.655 [Actor Thread 94] INFO  nextflow.processor.TaskProcessor - [3e/478360] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.655 [Actor Thread 193] INFO  nextflow.processor.TaskProcessor - [8e/b131d2] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.657 [Actor Thread 186] INFO  nextflow.processor.TaskProcessor - [e8/87ddb6] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.658 [Actor Thread 100] INFO  nextflow.processor.TaskProcessor - [a2/c7952c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.659 [Actor Thread 176] INFO  nextflow.processor.TaskProcessor - [f2/e9e090] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.661 [Actor Thread 210] INFO  nextflow.processor.TaskProcessor - [82/8e6932] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.661 [Actor Thread 106] INFO  nextflow.processor.TaskProcessor - [8c/1b841e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.662 [Actor Thread 158] INFO  nextflow.processor.TaskProcessor - [54/9351f7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.663 [Actor Thread 113] INFO  nextflow.processor.TaskProcessor - [2f/9fbd30] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.663 [Actor Thread 168] INFO  nextflow.processor.TaskProcessor - [8f/10e2db] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.667 [Actor Thread 116] INFO  nextflow.processor.TaskProcessor - [61/a2008f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.667 [Actor Thread 144] INFO  nextflow.processor.TaskProcessor - [74/3b762c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.668 [Actor Thread 111] INFO  nextflow.processor.TaskProcessor - [0f/315c37] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.668 [Actor Thread 163] INFO  nextflow.processor.TaskProcessor - [06/7a0447] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.668 [Actor Thread 197] INFO  nextflow.processor.TaskProcessor - [12/7b4e17] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.669 [Actor Thread 115] INFO  nextflow.processor.TaskProcessor - [9e/6739fd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.670 [Actor Thread 146] INFO  nextflow.processor.TaskProcessor - [25/b8c567] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.671 [Actor Thread 217] INFO  nextflow.processor.TaskProcessor - [c3/8fa12c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.671 [Actor Thread 136] INFO  nextflow.processor.TaskProcessor - [bd/bfec81] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.670 [Actor Thread 124] INFO  nextflow.processor.TaskProcessor - [05/267597] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.673 [Actor Thread 140] INFO  nextflow.processor.TaskProcessor - [d9/ad9684] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.674 [Actor Thread 194] INFO  nextflow.processor.TaskProcessor - [1e/0a4cb1] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.675 [Actor Thread 207] INFO  nextflow.processor.TaskProcessor - [ab/835b5e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.681 [Actor Thread 97] INFO  nextflow.processor.TaskProcessor - [fa/2d12cd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.676 [Actor Thread 192] INFO  nextflow.processor.TaskProcessor - [a4/df05ab] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.676 [Actor Thread 161] INFO  nextflow.processor.TaskProcessor - [82/850291] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.676 [Actor Thread 147] INFO  nextflow.processor.TaskProcessor - [cf/2caeab] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.681 [Actor Thread 185] INFO  nextflow.processor.TaskProcessor - [a4/f6c978] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.677 [Actor Thread 181] INFO  nextflow.processor.TaskProcessor - [ff/371620] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.681 [Actor Thread 200] INFO  nextflow.processor.TaskProcessor - [4c/0d92c8] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.682 [Actor Thread 199] INFO  nextflow.processor.TaskProcessor - [a3/7c84c8] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.682 [Actor Thread 132] INFO  nextflow.processor.TaskProcessor - [99/8d11d5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.682 [Actor Thread 135] INFO  nextflow.processor.TaskProcessor - [1d/113300] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.677 [Actor Thread 175] INFO  nextflow.processor.TaskProcessor - [de/dc6871] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.680 [Actor Thread 110] INFO  nextflow.processor.TaskProcessor - [79/4b1ba5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.682 [Actor Thread 88] INFO  nextflow.processor.TaskProcessor - [86/b7f89f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.683 [Actor Thread 98] INFO  nextflow.processor.TaskProcessor - [0b/270002] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.683 [Actor Thread 107] INFO  nextflow.processor.TaskProcessor - [6d/1b35db] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.683 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [1f/54a0bc] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.684 [Actor Thread 121] INFO  nextflow.processor.TaskProcessor - [4e/0b0bde] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.684 [Actor Thread 165] INFO  nextflow.processor.TaskProcessor - [29/cc9908] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.684 [Actor Thread 85] INFO  nextflow.processor.TaskProcessor - [ae/8f590d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.684 [Actor Thread 129] INFO  nextflow.processor.TaskProcessor - [73/0a81c4] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.685 [Actor Thread 92] INFO  nextflow.processor.TaskProcessor - [05/9ec3e4] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.685 [Actor Thread 159] INFO  nextflow.processor.TaskProcessor - [4f/0e82ea] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.687 [Actor Thread 64] INFO  nextflow.processor.TaskProcessor - [a4/24e57e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.687 [Actor Thread 73] INFO  nextflow.processor.TaskProcessor - [e9/4d3622] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.688 [Actor Thread 133] INFO  nextflow.processor.TaskProcessor - [e7/ca6506] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.688 [Actor Thread 118] INFO  nextflow.processor.TaskProcessor - [6b/bf8db9] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.688 [Actor Thread 162] INFO  nextflow.processor.TaskProcessor - [d8/e94c58] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.688 [Actor Thread 149] INFO  nextflow.processor.TaskProcessor - [12/120d54] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.689 [Actor Thread 206] INFO  nextflow.processor.TaskProcessor - [f5/bc83c4] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.691 [Actor Thread 173] INFO  nextflow.processor.TaskProcessor - [a1/1893da] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.692 [Actor Thread 153] INFO  nextflow.processor.TaskProcessor - [ae/f74443] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.692 [Actor Thread 208] INFO  nextflow.processor.TaskProcessor - [22/33f787] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.689 [Actor Thread 105] INFO  nextflow.processor.TaskProcessor - [82/7b852d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.693 [Actor Thread 145] INFO  nextflow.processor.TaskProcessor - [04/a4f4cf] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.694 [Actor Thread 190] INFO  nextflow.processor.TaskProcessor - [ad/0574f0] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.694 [Actor Thread 143] INFO  nextflow.processor.TaskProcessor - [76/2e6bec] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.694 [Actor Thread 109] INFO  nextflow.processor.TaskProcessor - [2f/a2aaaa] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.697 [Actor Thread 203] INFO  nextflow.processor.TaskProcessor - [8d/19ccf2] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.697 [Actor Thread 171] INFO  nextflow.processor.TaskProcessor - [00/b189d7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.697 [Actor Thread 187] INFO  nextflow.processor.TaskProcessor - [a4/0c92f9] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.697 [Actor Thread 172] INFO  nextflow.processor.TaskProcessor - [1e/af997d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.699 [Actor Thread 68] INFO  nextflow.processor.TaskProcessor - [c1/371d89] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.698 [Actor Thread 70] INFO  nextflow.processor.TaskProcessor - [cf/b29ff3] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.700 [Actor Thread 84] INFO  nextflow.processor.TaskProcessor - [ed/9e86c4] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.702 [Actor Thread 69] INFO  nextflow.processor.TaskProcessor - [46/979f23] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.705 [Actor Thread 179] INFO  nextflow.processor.TaskProcessor - [4c/448135] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.705 [Actor Thread 167] INFO  nextflow.processor.TaskProcessor - [8e/076c2b] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.702 [Actor Thread 82] INFO  nextflow.processor.TaskProcessor - [31/aea0a7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.702 [Actor Thread 155] INFO  nextflow.processor.TaskProcessor - [cd/28a4eb] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.704 [Actor Thread 79] INFO  nextflow.processor.TaskProcessor - [9e/549abd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.706 [Actor Thread 151] INFO  nextflow.processor.TaskProcessor - [71/bd1719] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.701 [Actor Thread 103] INFO  nextflow.processor.TaskProcessor - [8b/b7a178] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.707 [Actor Thread 177] INFO  nextflow.processor.TaskProcessor - [c6/7834ab] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.707 [Actor Thread 183] INFO  nextflow.processor.TaskProcessor - [c4/67e06b] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.709 [Actor Thread 77] INFO  nextflow.processor.TaskProcessor - [3e/d297d6] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.707 [Actor Thread 123] INFO  nextflow.processor.TaskProcessor - [54/8a46d7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.707 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [88/7da070] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.707 [Actor Thread 130] INFO  nextflow.processor.TaskProcessor - [af/a2aefc] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.706 [Actor Thread 131] INFO  nextflow.processor.TaskProcessor - [bc/c71212] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.710 [Actor Thread 196] INFO  nextflow.processor.TaskProcessor - [0a/5e6858] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.706 [Actor Thread 119] INFO  nextflow.processor.TaskProcessor - [28/5f85ef] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.706 [Actor Thread 66] INFO  nextflow.processor.TaskProcessor - [97/817c2c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.706 [Actor Thread 205] INFO  nextflow.processor.TaskProcessor - [52/585ebd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.710 [Actor Thread 90] INFO  nextflow.processor.TaskProcessor - [5a/100e0d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.706 [Actor Thread 198] INFO  nextflow.processor.TaskProcessor - [30/307c6e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.707 [Actor Thread 67] INFO  nextflow.processor.TaskProcessor - [48/c321e2] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.707 [Actor Thread 91] INFO  nextflow.processor.TaskProcessor - [cb/488833] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.708 [Actor Thread 139] INFO  nextflow.processor.TaskProcessor - [94/19acc5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.711 [Actor Thread 95] INFO  nextflow.processor.TaskProcessor - [34/7c3b5a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.713 [Actor Thread 101] INFO  nextflow.processor.TaskProcessor - [8a/0ad147] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.714 [Actor Thread 117] INFO  nextflow.processor.TaskProcessor - [cc/b5495e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.718 [Actor Thread 127] INFO  nextflow.processor.TaskProcessor - [10/b047f1] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.719 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [f0/eb3433] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.720 [Actor Thread 188] INFO  nextflow.processor.TaskProcessor - [89/16afaa] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.720 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [e1/5035b7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.720 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [ec/e3f08f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.720 [Actor Thread 71] INFO  nextflow.processor.TaskProcessor - [fc/cd94b5] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.721 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [bf/0fc2c6] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.721 [Actor Thread 169] INFO  nextflow.processor.TaskProcessor - [a8/d34c88] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.721 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [79/afc4fd] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.722 [Actor Thread 61] INFO  nextflow.processor.TaskProcessor - [1b/f6e04e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.722 [Actor Thread 57] INFO  nextflow.processor.TaskProcessor - [95/53fc40] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.725 [Actor Thread 51] INFO  nextflow.processor.TaskProcessor - [b0/cd6665] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.725 [Actor Thread 83] INFO  nextflow.processor.TaskProcessor - [a5/a88f7d] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.726 [Actor Thread 125] INFO  nextflow.processor.TaskProcessor - [c8/7fb6ba] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.726 [Actor Thread 75] INFO  nextflow.processor.TaskProcessor - [30/e98340] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.726 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [1d/07f113] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.722 [Actor Thread 59] INFO  nextflow.processor.TaskProcessor - [01/1a3780] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.723 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [0a/88f32e] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.723 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [54/800a26] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.723 [Actor Thread 99] INFO  nextflow.processor.TaskProcessor - [1b/683688] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.724 [Actor Thread 86] INFO  nextflow.processor.TaskProcessor - [50/d8f35f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.724 [Actor Thread 189] INFO  nextflow.processor.TaskProcessor - [2d/cc8021] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.724 [Actor Thread 141] INFO  nextflow.processor.TaskProcessor - [ba/f42bd7] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.724 [Actor Thread 63] INFO  nextflow.processor.TaskProcessor - [36/cb3253] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.726 [Actor Thread 56] INFO  nextflow.processor.TaskProcessor - [dc/dd8e91] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.729 [Actor Thread 137] INFO  nextflow.processor.TaskProcessor - [1c/a7488f] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.729 [Actor Thread 204] INFO  nextflow.processor.TaskProcessor - [d3/f4f7c6] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.730 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [66/c75505] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.730 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [4e/cbf8af] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.732 [Actor Thread 60] INFO  nextflow.processor.TaskProcessor - [87/2be39c] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.733 [Actor Thread 62] INFO  nextflow.processor.TaskProcessor - [a6/64ba1a] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:11.733 [Actor Thread 58] INFO  nextflow.processor.TaskProcessor - [73/8b5c9b] Cached process > StructurePredict (Predict protein structures from phold Annotation)
-Nov-04 17:12:12.103 [Actor Thread 22] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/foldseek - Is a directory
-Nov-04 17:12:12.103 [Actor Thread 65] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/foldseek; path=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/foldseek
-Nov-04 17:12:12.124 [Actor Thread 32] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.124 [Actor Thread 65] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco; path=/ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco
-Nov-04 17:12:12.136 [Actor Thread 60] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.136 [Actor Thread 63] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.139 [Actor Thread 99] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.143 [Actor Thread 204] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.168 [Actor Thread 59] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.169 [Actor Thread 189] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.169 [Actor Thread 62] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.169 [Actor Thread 40] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.169 [Actor Thread 141] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.169 [Actor Thread 72] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/folddisco - Is a directory
-Nov-04 17:12:12.188 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [7a/9abc35] Cached process > FoldseekDB (creates DB of folded Phage proteins)
-Nov-04 17:12:12.217 [Actor Thread 188] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/foldseek - Is a directory
-Nov-04 17:12:12.217 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [19/d2bf6b] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.222 [Actor Thread 188] INFO  nextflow.processor.TaskProcessor - [f3/aad228] Cached process > FoldseekMatch (matches curted proteins against Phage proteins)
-Nov-04 17:12:12.260 [Actor Thread 63] INFO  nextflow.processor.TaskProcessor - [03/79d0da] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.260 [Actor Thread 60] INFO  nextflow.processor.TaskProcessor - [66/9868bc] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.268 [Actor Thread 99] INFO  nextflow.processor.TaskProcessor - [8e/d12d94] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.276 [Actor Thread 204] INFO  nextflow.processor.TaskProcessor - [c7/f458ae] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.302 [Actor Thread 59] INFO  nextflow.processor.TaskProcessor - [4e/151913] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.302 [Actor Thread 189] INFO  nextflow.processor.TaskProcessor - [92/faada3] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.305 [Actor Thread 62] INFO  nextflow.processor.TaskProcessor - [12/97f48a] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.307 [Actor Thread 72] INFO  nextflow.processor.TaskProcessor - [0a/07c06a] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.307 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [e5/0c9234] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.307 [Actor Thread 141] INFO  nextflow.processor.TaskProcessor - [53/497481] Cached process > Folddisco_Match (compares Motives with Foldddisco)
-Nov-04 17:12:12.315 [Actor Thread 141] DEBUG nextflow.conda.CondaCache - Failed to check for @EXPLICIT marker in file: /ceph/ibmi/it/dont-backup/limburg/miniforge3/envs/python - Is a directory
-Nov-04 17:12:12.365 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Nov-04 17:12:12.366 [Task submitter] INFO  nextflow.Session - [ab/7ac060] Submitted process > Combine_results (combines foldseek and folddisco files)
-Nov-04 17:12:14.531 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 322; name: Combine_results (combines foldseek and folddisco files); status: COMPLETED; exit: 0; error: -; workDir: /ceph/ibmi/ipb/students/limburg/git_pipeline/Phage_reverse_annotation_pipeline/pipeline/work/ab/7ac0608d1611627ce004ecec8da478]
-Nov-04 17:12:14.532 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=672; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Nov-04 17:12:14.538 [main] DEBUG nextflow.Session - Session await > all processes finished
-Nov-04 17:12:14.629 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Nov-04 17:12:14.629 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Nov-04 17:12:14.632 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
-Nov-04 17:12:14.633 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
-Nov-04 17:12:14.641 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=321; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2.1s; failedDuration=0ms; cachedDuration=5h 48m 8s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
-Nov-04 17:12:14.665 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Nov-04 17:12:14.692 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
-Nov-04 17:12:14.693 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+Nov-12 14:19:40.606 [main] DEBUG nextflow.Session - Session aborted -- Cause: No such property: groupTuple for class: groovyx.gpars.dataflow.DataflowBroadcast
+Nov-12 14:19:40.620 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] flatten
+  [operator] flatten
+  [operator] groupTuple
+  [operator] combine
+
+Nov-12 14:19:40.644 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Nov-12 14:19:40.695 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Nov-12 14:19:40.870 [main] ERROR nextflow.cli.Launcher - @unknown
+groovy.lang.MissingPropertyException: No such property: groupTuple for class: groovyx.gpars.dataflow.DataflowBroadcast
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:68)
+	at org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures.unwrap(IndyGuardsFiltersAndSignatures.java:163)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Main$_runScript_closure1$_closure2.doCall(Main:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:187)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:297)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:308)
+	at nextflow.script.parser.v2.ScriptLoaderV2.runScript(ScriptLoaderV2.groovy:99)
+	at nextflow.script.parser.v2.ScriptLoaderV2.runScript(ScriptLoaderV2.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:229)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:128)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
