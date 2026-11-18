@@ -7,23 +7,28 @@ def get_args():
     #imports files from nextflow channels
     parser = argparse.ArgumentParser()
     parser.add_argument('--folddisco', type = str)
-    parser.add_argument('--geneID', type = str)
     return parser.parse_args()
 args = get_args()
 
-combi_tsv = open(f"{args.geneID}_folddiscoHits.tsv","w")
+combi_tsv = open(f"folddiscoHits.tsv","w")
 folddisco_folder = Path(args.folddisco)
-combi_tsv.write("DB_Hit\tunkonwn_protein_annotation_ID\tnode_count\ttid\trmsd\tmatching_residues\tquery_residues\tSite" + "\n")
+combi_tsv.write("query\tPhage\tfident\tnode_count\ttid\trmsd\tmatching_residues\tquery_residues\tHitSite" + "\n")
 
 for files in folddisco_folder.iterdir() :
       with open(files, "r") as folddisco_in :
-        SiteHit = files.name[33:].replace(".txt","")
-        ProtName = files.name[26:33]
+        SiteHit = files.name[24:].replace(".txt","")
+        ProtName = files.name[17:23]
         for line in folddisco_in :
             folddisco_hit = line.strip()
             if not folddisco_hit == "":
-                folddisco_hit = folddisco_hit.replace("folded_protein_cifs/","")
-                folddisco_hit = f"{ProtName}\t{folddisco_hit}\t{SiteHit}"
+                folddisco_hit = folddisco_hit.replace("folded_proteins/","")
+                Phage = folddisco_hit[:8]
+                folddisco_hit = f"{ProtName}\t{Phage}\t{folddisco_hit}\t{SiteHit}"
                 combi_tsv.write(folddisco_hit + "\n")
             
 combi_tsv.close()
+
+df = pd.read_csv("folddiscoHits.tsv", sep="\t", dtype=str)
+
+for phage, hits in df.groupby("Phage"):
+    hits.to_csv(f"folddisco_phages/folddisco_hits_{phage}.tsv", sep="\t", index = False)

@@ -5,21 +5,24 @@ process Folddiso_postprocessing
 
     tag "combines folddisco results to one tsv"
     
-    publishDir "$params.outputDir/output", pattern: "*_folddiscoHits.tsv", mode: params.pubDirMode
+    publishDir "$params.outputDir/output", pattern: "folddiscoHits.tsv", mode: params.pubDirMode
+    publishDir "$params.outputDir/output", pattern: "folddisco_phages/*", mode: params.pubDirMode
 
 
     input:
-        tuple val(geneID), path(folddisco_matches)
+        path(folddisco_matches)
 
     output: 
-        path "${geneID}_folddiscoHits.tsv"
+        path "folddiscoHits.tsv"
+        path "folddisco_phages/*"
 
     script:
     """
     mkdir -p folddisco
+    mkdir -p folddisco_phages
     cp ${folddisco_matches} folddisco/
 
-    python ${projectDir}/bin/src/folddisco_postprocessing.py --folddisco folddisco --geneID ${geneID}
+    python ${projectDir}/bin/src/folddisco_postprocessing.py --folddisco folddisco
     """
 
 }

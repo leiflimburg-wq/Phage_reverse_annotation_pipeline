@@ -7,16 +7,16 @@ process FoldseekDB
     conda "${params.conda_path}/foldseek"
 
     input: 
-        tuple val(geneID), path(foldedProteins)
+        path(foldedProteins)
 
     output: 
-        tuple val(geneID), path("${geneID}_targetphageDB*"), emit: foldseekDB_phage
+        path("targetphageDB*"), emit: foldseekDB_phage
 
     script:
     """
     foldseek createdb \\
     ${foldedProteins} \\
-    ${geneID}_targetphageDB \\
+    targetphageDB \\
     --input-format 2 \\
     """
 } 

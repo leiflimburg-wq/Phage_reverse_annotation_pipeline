@@ -10,10 +10,11 @@ process Folddisco_Match
     //publishDir "$params.outputDir/output", pattern: "*folddisco_output*.txt", mode: params.pubDirMode
 
     input: 
-        tuple val(geneID), path(foldedProteins), val(prot_ID), path(curated_ch), path(site_txts)
+        path(foldedProteins)
+        tuple val(prot_ID), path(curated_ch), path(site_txts)
 
     output:
-        tuple val(geneID), path("*folddisco_output*.txt"),  emit: folddisco_matches
+        path("folddisco_output*.txt"),  emit: folddisco_matches
       
         
     script:
@@ -21,6 +22,8 @@ process Folddisco_Match
     """
 
     mkdir -p index
+    mkdir -p folded_proteins
+    cp ${foldedProteins} folded_proteins
 
     folddisco index \\
         -p folded_proteins \\
@@ -31,14 +34,14 @@ process Folddisco_Match
         echo "Using motif file: \$file"
         site="\${file:20}"
         site="\${site%.txt}"
-        touch ${geneID}_folddisco_output_${clean_prot_ID}_\${site}.txt
+        touch folddisco_output_${clean_prot_ID}_\${site}.txt
         folddisco query \\
             -i index/phage_proteome_folddisco \\
             -p ${curated_ch} \\
             -q "\$(cat "\$file")" \\
             -t ${params.folddiscoCPUs} \\
             --rmsd ${params.folddisco_rmsd} \\
-            >> "${geneID}_folddisco_output_${clean_prot_ID}_\${site}.txt"
+            >> "folddisco_output_${clean_prot_ID}_\${site}.txt"
 
     done
 

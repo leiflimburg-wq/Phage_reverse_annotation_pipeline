@@ -26,7 +26,7 @@ process PharokkaAnnotate
       pharokka.py \\
       -i ${genomes} \\
       -d ${params.pharokkaDB} \\
-      -o ${geneID}_pharokka \\
+      -o pharokka \\
       -t ${params.pharokkaCPUs} \\
       -p ${geneID}_pharokkaGBK
    """
