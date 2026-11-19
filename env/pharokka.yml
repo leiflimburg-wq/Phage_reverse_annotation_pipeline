@@ -1,7 +1,7 @@
 name: pharokka
 channels:
-  - bioconda
   - conda-forge
+  - bioconda
 dependencies:
   - _openmp_mutex=4.5=20_gnu
   - _python_abi3_support=1.0=hd8ed1ab_3
@@ -197,7 +197,4 @@ dependencies:
   - zlib-ng=2.3.3=hce19668_1
   - zstd=1.5.7=hb78ec9c_7
   - pip:
-    - backports.tempfile==1.0
-    - textwrap3==0.9.2
-
-
+      - fastpath==1.9

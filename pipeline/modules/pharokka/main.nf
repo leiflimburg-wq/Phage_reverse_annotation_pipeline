@@ -2,7 +2,8 @@ process PharokkaAnnotate
 {
    cache params.pharokkaCache
    maxForks params.pharokkaForks
-   
+   cpus params.pharokkaCPUs
+
    // loads the pharokka conda enviorment (see pharokka.yml) and gives a process description
    conda "${params.conda_path}/pharokka"
 
@@ -27,7 +28,7 @@ process PharokkaAnnotate
       -i ${genomes} \\
       -d ${params.pharokkaDB} \\
       -o pharokka \\
-      -t ${params.pharokkaCPUs} \\
+      -t ${task.cpus} \\
       -p ${geneID}_pharokkaGBK
    """
 }

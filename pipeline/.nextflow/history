@@ -378,3 +378,14 @@
 2026-11-18 11:09:42	6.3s	sick_solvay	ERR	dd78468062cdc255ffcf63081942d846	be1897e3-2321-419e-baa0-be3ab51bdfbe	nextflow run main.nf -resume
 2026-11-18 11:10:01	7s	stupefied_wozniak	ERR	dd78468062cdc255ffcf63081942d846	be1897e3-2321-419e-baa0-be3ab51bdfbe	nextflow run main.nf -resume
 2026-11-18 11:12:28	6.4s	spontaneous_panini	OK	dd78468062cdc255ffcf63081942d846	be1897e3-2321-419e-baa0-be3ab51bdfbe	nextflow run main.nf -resume
+2026-11-18 16:07:57	-	happy_hawking	-	dd78468062cdc255ffcf63081942d846	9de8a260-d1ec-44ae-ac54-3428a1eef55a	nextflow run main.nf
+2026-11-18 16:09:53	10m 26s	furious_moriondo	ERR	dd78468062cdc255ffcf63081942d846	ec3707af-2284-404e-80a9-14edcdd22789	nextflow run main.nf
+2026-11-18 17:03:55	3h 21m 12s	goofy_newton	ERR	dd78468062cdc255ffcf63081942d846	ec3707af-2284-404e-80a9-14edcdd22789	nextflow run main.nf -resume
+2026-11-19 09:38:27	29m 50s	dreamy_bernard	ERR	dd78468062cdc255ffcf63081942d846	91e0511e-e20b-44ee-9dc5-b65d1cfd9554	nextflow run main.nf
+2026-11-19 11:00:41	2m 50s	nasty_stone	ERR	980e449088a140e2a3a0231237c02312	af58177b-95bb-49f8-8df9-8d485b70463f	nextflow run main.nf
+2026-11-19 11:06:12	5m 4s	astonishing_khorana	ERR	980e449088a140e2a3a0231237c02312	fcdb18f5-93a9-45f7-ae7b-bf1aaf74f2c6	nextflow run main.nf
+2026-11-19 11:20:06	11.3s	mighty_lovelace	ERR	980e449088a140e2a3a0231237c02312	fcdb18f5-93a9-45f7-ae7b-bf1aaf74f2c6	nextflow run main.nf -resume
+2026-11-19 11:21:58	10.8s	stupefied_edison	ERR	980e449088a140e2a3a0231237c02312	fcdb18f5-93a9-45f7-ae7b-bf1aaf74f2c6	nextflow run main.nf -resume
+2026-11-19 11:22:28	10.6s	insane_ampere	ERR	980e449088a140e2a3a0231237c02312	fcdb18f5-93a9-45f7-ae7b-bf1aaf74f2c6	nextflow run main.nf -resume
+2026-11-19 11:23:33	49m 33s	sleepy_swirles	OK	980e449088a140e2a3a0231237c02312	fcdb18f5-93a9-45f7-ae7b-bf1aaf74f2c6	nextflow run main.nf -resume
+2026-11-19 12:13:17	9m 2s	loquacious_franklin	ERR	980e449088a140e2a3a0231237c02312	41e1f913-31b7-480d-8c13-263185acdd2c	nextflow run main.nf

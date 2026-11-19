@@ -2,6 +2,7 @@ process Folddisco_Match
 {
     maxForks params.folddiscoForks
     cache params.folddiscoCache
+    cpus params.folddiscoCPUs
 
     conda "${params.conda_path}/folddisco"
 
@@ -28,7 +29,7 @@ process Folddisco_Match
     folddisco index \\
         -p folded_proteins \\
         -i index/phage_proteome_folddisco \\
-        -t ${params.folddiscoCPUs}
+        -t ${task.cpus}
 
     for file in map_${clean_prot_ID}*.txt; do
         echo "Using motif file: \$file"
@@ -39,7 +40,7 @@ process Folddisco_Match
             -i index/phage_proteome_folddisco \\
             -p ${curated_ch} \\
             -q "\$(cat "\$file")" \\
-            -t ${params.folddiscoCPUs} \\
+            -t ${task.cpus} \\
             --rmsd ${params.folddisco_rmsd} \\
             >> "folddisco_output_${clean_prot_ID}_\${site}.txt"
 

@@ -15,7 +15,7 @@ process GBKextraction
 
     script:  
     """
-    python ${projectDir}/bin/src/gbk_extraction.py --pholdAnnotation ${pholdAnnotation}
+    python ${projectDir}/bin/src/gbk_extraction.py --pholdAnnotation ${pholdAnnotation} --geneID ${geneID}
     """
 
 }

@@ -2,6 +2,7 @@ process PholdAnnotate
 {
    cache params.pholdCache
    maxForks params.pholdForks
+   cpus params.pholdCPUs
 
    // loads the pharokka conda enviorment (see pholdENV.yml) and gives a process description
    conda "${params.conda_path}/pholdENV"
@@ -20,14 +21,14 @@ process PholdAnnotate
    output:
       tuple val(geneID), path("*/*phold.gbk"), emit: pholdAnnotation
       tuple val(geneID), path("*/*phold_3di.fasta"), emit: phold3diAnnotation
-      tuple val(geneID), path("*/*phold_aa.fasta"), emit: pholdaaAnnotation
+      path("*/*phold_aa.fasta"), emit: pholdaaAnnotation
 
    // runs the phold script with: the annotation recieved by pharokka, 16 threads, creates output files named "phold.XXX" , and the external database "pholdDB" as definied in the configs
    script:
    """
       phold run \\
       -i ${pharokkaAnnotation} \\
-      -t ${params.pholdCPUs} \\
+      -t ${task.cpus} \\
       -p ${geneID}_phold \\
       -d ${params.pholdDB}
    """

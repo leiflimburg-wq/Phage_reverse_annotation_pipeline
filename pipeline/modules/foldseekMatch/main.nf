@@ -2,6 +2,7 @@ process FoldseekMatch
 {
     maxForks params.foldseekForks
     cache params.foldseekCache
+    cpus params.foldseekCPUs
 
     tag "matches curted proteins against Phage proteins"
 
@@ -28,6 +29,6 @@ process FoldseekMatch
     foldseekMatches_raw.tsv \\
     tmp \\
     -e ${params.foldseek_evalue} \\
-    --threads ${params.foldseekCPUs}
+    --threads ${task.cpus}
     """  
 }
