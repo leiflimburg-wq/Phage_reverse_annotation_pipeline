@@ -389,3 +389,9 @@
 2026-11-19 11:22:28	10.6s	insane_ampere	ERR	980e449088a140e2a3a0231237c02312	fcdb18f5-93a9-45f7-ae7b-bf1aaf74f2c6	nextflow run main.nf -resume
 2026-11-19 11:23:33	49m 33s	sleepy_swirles	OK	980e449088a140e2a3a0231237c02312	fcdb18f5-93a9-45f7-ae7b-bf1aaf74f2c6	nextflow run main.nf -resume
 2026-11-19 12:13:17	9m 2s	loquacious_franklin	ERR	980e449088a140e2a3a0231237c02312	41e1f913-31b7-480d-8c13-263185acdd2c	nextflow run main.nf
+2026-11-19 12:26:38	1h 23m 31s	gloomy_yalow	ERR	980e449088a140e2a3a0231237c02312	41274914-2a60-45aa-9e78-b4f8a2597c30	nextflow run main.nf
+2026-11-19 13:52:28	6.8s	shrivelled_yalow	ERR	804c0a5123a47c0db88ca4e242fc7f75	bc03bb48-2fe0-4a5b-a872-7984433b9b07	nextflow run main.nf
+2026-11-19 13:52:51	-	wise_tuckerman	-	804c0a5123a47c0db88ca4e242fc7f75	61f7761c-f1df-4a35-b1c3-32e790fcc7c4	nextflow run main.nf
+2026-11-19 15:53:41	-	fabulous_ardinghelli	-	db2704554d0aacf6a633fcdd405befb5	61f7761c-f1df-4a35-b1c3-32e790fcc7c4	nextflow run main.nf -resume
+2026-11-19 15:54:48	-	mighty_brazil	-	db2704554d0aacf6a633fcdd405befb5	265be4f2-f367-42c0-b1ec-ab23f04d52a0	nextflow run main.nf
+2026-11-19 15:56:50	19h 50m 41s	dreamy_torricelli	OK	c3c6b65779a559a1340e0a34e933ceb6	3f8f5ae4-e568-458c-b598-9472b0cdd0ef	nextflow run main.nf
